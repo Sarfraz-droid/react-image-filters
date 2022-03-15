@@ -1,27 +1,10 @@
 import React, { Children, useEffect, useState } from 'react';
-
-interface dropShadow {
-  x?: number;
-  y?: number;
-  blur?: number;
-  color?: string;
-}
-
-interface Props {
-  children: any;
-  grayScale?: number;
-  blur?: number;
-  brightness?: number;
-  contrast?: number;
-  invert?: number;
-  sepia?: number;
-  hueRotate?: number;
-  saturate?: number;
-  dropShadow?: dropShadow;
-}
+import type Props from './FiltersInterface';
 
 export default function Filters(props: Props) {
-  const [filter, setFilter] = useState<any>(null);
+  const [filter, setFilter] = useState<any>(
+    React.createElement('div', {}, props.children),
+  );
 
   useEffect(() => {
     const {
@@ -35,6 +18,7 @@ export default function Filters(props: Props) {
       saturate,
       dropShadow,
     } = props;
+
     const filt = [
       {
         filter: `grayscale(${grayScale})`,
@@ -88,7 +72,7 @@ export default function Filters(props: Props) {
         .reverse();
 
       let res: Array<React.ReactHTMLElement<any>> = [];
-      let previous: any = React.createElement('div');
+      let previous: any = React.createElement('div', {}, props.children);
       for (let i = 0; i <= size; i++) {
         if (res.length == 0) {
           res.push(React.cloneElement(newFilter[i], {}, props.children));
@@ -101,7 +85,7 @@ export default function Filters(props: Props) {
       console.log(previous);
       return previous;
     });
-  }, []);
+  }, [{ ...props }]);
 
   return <React.Fragment>{filter}</React.Fragment>;
 }
