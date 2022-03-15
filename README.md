@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # New Project
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
@@ -23,3 +24,6 @@ Your app is ready to be deployed!
 
 Launches the application test runner.
 Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+=======
+# react-filter
+>>>>>>> db6f6ad3af54dcbbbebcbf552e80b4757846989e
