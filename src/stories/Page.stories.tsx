@@ -4,7 +4,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import Props from 'src/lib/FiltersInterface';
 
 export default {
-  title: 'Filters',
+  title: 'Filter',
   component: FilterIcon,
 } as ComponentMeta<typeof FilterIcon>;
 
@@ -46,7 +46,7 @@ Invert.args = {
 // Sepia
 export const Sepia = Template.bind({});
 Sepia.args = {
-  sepia: 0.5,
+  sepia: 0.3,
 };
 
 // Hue Rotate
