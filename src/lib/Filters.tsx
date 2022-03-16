@@ -1,4 +1,5 @@
-import React, { Children, useEffect, useState } from 'react';
+import React from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import type Props from './FiltersInterface';
 
 export default function Filters(props: Props) {
@@ -87,5 +88,5 @@ export default function Filters(props: Props) {
     });
   }, [props]);
 
-  return <React.Fragment>{filter}</React.Fragment>;
+  return <Fragment>{filter}</Fragment>;
 }
