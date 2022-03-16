@@ -26,7 +26,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "npm run build-storybook",
     "chromatic": "chromatic --exit-zero-on-changes",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d build"
