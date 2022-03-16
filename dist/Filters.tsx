@@ -8,7 +8,7 @@ export default function Filters(props: Props) {
 
   useEffect(() => {
     const {
-      grayscale,
+      grayScale,
       blur,
       brightness,
       contrast,
@@ -21,8 +21,8 @@ export default function Filters(props: Props) {
 
     const filt = [
       {
-        filter: `grayscale(${grayscale})`,
-        value: grayscale,
+        filter: `grayscale(${grayScale})`,
+        value: grayScale,
       },
       {
         filter: `blur(${blur}px)`,

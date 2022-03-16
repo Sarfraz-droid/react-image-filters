@@ -9,7 +9,7 @@ interface dropShadow {
 
 interface Props {
   children: any;
-  grayscale?: number;
+  grayScale?: number;
   blur?: number;
   brightness?: number;
   contrast?: number;
