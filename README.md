@@ -1,3 +1,5 @@
+[![logo](static/logo.svg)](https://sarfraz-droid.github.io/react-filter/)
+
 # React Image Filters
 
 Lightweight library for using filters in react
