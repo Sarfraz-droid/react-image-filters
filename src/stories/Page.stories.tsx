@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof FilterIcon> = (args) => (
 // Grayscale
 export const GrayScale = Template.bind({});
 GrayScale.args = {
-  grayScale: 0.5,
+  grayscale: 0.5,
 };
 
 // Blur
