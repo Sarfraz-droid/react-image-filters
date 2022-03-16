@@ -21,14 +21,19 @@
     },
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "npm run build-storybook",
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d build"
   },
+  "homepage": "https://github.com/Sarfraz-droid/react-filter",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -56,6 +61,8 @@
     "@web/test-runner": "^0.13.3",
     "babel-loader": "^8.2.3",
     "chai": "^4.3.4",
+    "chromatic": "^6.5.3",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.2.1",
     "snowpack": "^3.3.7",
     "typescript": "^4.2.4"

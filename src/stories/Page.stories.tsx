@@ -1,10 +1,9 @@
 import React from 'react';
 import FilterIcon from '../components/Filter';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import Props from 'src/lib/FiltersInterface';
 
 export default {
-  title: 'Filters',
+  title: 'Filter',
   component: FilterIcon,
 } as ComponentMeta<typeof FilterIcon>;
 
@@ -46,7 +45,7 @@ Invert.args = {
 // Sepia
 export const Sepia = Template.bind({});
 Sepia.args = {
-  sepia: 0.5,
+  sepia: 0.3,
 };
 
 // Hue Rotate
@@ -76,7 +75,7 @@ DropShadow.args = {
 // Mixed
 export const Mixed = Template.bind({});
 Mixed.args = {
-  grayScale: 0.5,
+  grayscale: 0.5,
   blur: 5,
   brightness: 1,
   contrast: 1,
