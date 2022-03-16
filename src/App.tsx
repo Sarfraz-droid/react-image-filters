@@ -7,7 +7,7 @@ interface AppProps {}
 function App({}: AppProps) {
   return (
     <React.Fragment>
-      <Filters grayScale={0.5} blur={5}>
+      <Filters grayscale={0.5} blur={2}>
         <div>
           <img
             src="https://picsum.photos/200"
